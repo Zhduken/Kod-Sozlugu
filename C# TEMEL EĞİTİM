@@ -1,6 +1,6 @@
 // Emeğe Saygı Olarak Kaynak Kodumu Kullanırken Aldığınız Kişiyi Belirtin
 
-//kendiniz bir c# dosyası oluşturmak isterseniz ctrl + shift + p kombosunu yapın ve New projeti seçin sonra console appi seçin defaultta-
+//kendiniz bir c# dosyası oluşturmak isterseniz ctrl  + shift +  p kombosunu yapın ve New projeti seçin sonra console appi seçin defaultta-
 //- ayarlayıp projeje isimini yazın oluşan dosyada Consoleappi açın ve Program.csyi seçin bu kadar
 // info = //'dan sonra başlayan cümleler koda dahil olmaz yorum satırıdır  
 // Her fonksyon yani kod satırından sonra ; koyarak kodu bitirin
