@@ -1,0 +1,84 @@
+import math #math kütüphanesini ekler ve bunu math. ile çağırırız
+import tkinter as tk #tk kütüphanesini ekleriz ve tk ile çağırılmasını söyleriz
+import random
+#SÖZLÜKLER KÜMELER LİSTELEME TUPLE
+#listeler az kullanılan ama pythonda değişkenlerde temel parçalardandır
+meyveler = ["Elma","Armut","Muz","Çilek"]
+#bu bir sınıf listesi gibi düşünün
+
+print(meyveler)
+#bu meyvelerdeki tüm elemanları yazar
+
+print(meyveler[0]) #ilk elemanı yazar ve listede ilk elemanın sırası 0dır
+
+print(meyveler[-1]) #sondan ilk elemanı yazar
+
+print(meyveler[1:3])
+#birden üçe kadar olanları yazar 1.si dahil değildir
+
+meyveler.append("Karpuz") # karpuz üyesini ekler
+meyveler.remove("Muz") # Muz üyesini siler
+
+kisi = {"ad": "Ahmet", "iş": "Öğrenci", "yaş": "13"} #bir kayıt programı yaptığınızı düşünelim
+# ve kişinin yaşını ismini ayrı kaydetceksiniz
+#kullanımında {"anahtarkelime": "cevap", diye gider sonda , koymayın
+#bunun için sözlükler mesela sözlükte yaş dersen yaşa ne eşitlemişsen onu verir
+print(kisi["ad"]) #sözlükte ad'a verilen cevabı yazar yani mesela ahmet'in ismine erişmek
+#istiyosan ad demen yeterli olur
+kisi["soyad"] = "Söylemedi" #böylede yeni öğe ekleriz
+
+# KÜME
+sayı = {1, 2, 3, 4} #benzersiz öğelerden oluşur sıralı gider
+sayı.add(7) #eleman ekler
+sayı.remove(3) #eleman siler
+print(sayı)
+
+tuple = ("Ahmet", "Mehmet", "Muhammed") #bunu bir agalar lol ekibi gibi düşünebilirsiniz
+#tuplelere bir kişi ekleyemessiniz veya çıkaramazsınız
+#genelde function çağırma için kullanılır
+
+#DEF function çağırma
+
+def Selamla():
+    print("Selam Komutan")
+#çok basittir kendi fonksyonumuzu tanımlıyoruz def bir fonksyon oluşturma komududur
+# def istediğinisim(): ve satır devamına bu fonksyonu çağırınca ne yapacağını seç
+Selamla() #her Selamla() yazdığımda artık seri onitöre Selam Komutan yazacak
+
+
+#WHİLE döngüler
+wsayi = 1
+#bu temel taşlardan biridir
+while wsayi < 10:
+    wsayi += 1
+    print("Sayı 1 arttı ")#temeli şu while (istediğindeğişken) (istediğindurum) (herhangibirdeğer);
+    #wsayi 10dan küçük olduğu sürece wsayiya 1 ekle ve printte belirtilen şeyi yazdır
+    #info arttırmak için + yerine += kullanın çıkarmadada -=
+
+#Math Kütüphanesi
+print(math.sqrt(9)) #9un karekökünü bul
+print(math.pow(2,4)) #kuvvet değerini yazdır (taban, kuvvet)
+#kütüphaneleri kullanırken kütüphane çağırma fonksyonunu kullanın
+
+#bunlar matematik fonkyonlarını çağırır math. yazarak fonksyonları aktif edin
+#eğer kodun en başında import math yazmassa olmaz kütüphaneyi dahil etmeniz lazım
+
+#Random Kütüphanesi
+rand = random.randint(1, 10) #rand artık 1le 10 arasında rastgele bir değere atandı
+rand1 = random.random #rand1 ise 0.0 ile 1.0 arasında rastgele bir sayıya atandı
+rand2 = random.uniform(1, 10) #rand2 ise 1le 10 arasında ondalıklı bir sayıya atandı
+# formül  (başlangıçsayısı , bitişsayısı)
+
+#Tkinter Özel Sekme Kütüphanesi
+#seri monitörden bıktıysanız kendi sekmenizi açma vakti
+sekme = tk.Tk() #sekmeye tanımlar
+sekme.geometry("500x500") #sekmenin büyüklüğünü ayarlar
+sekmet = tk.Label(sekme, text="Merhaba", font=("Arial",20,"bold"))
+#sekme adlı değişkene bağlı yazı oluşturdu  bunu parantezin başında belirtiriz
+#tk.Label(bağlıolacağısekme, text="metin" font=("Fontu",ölçüsü,"Fontun Kalınlığı")
+#parantezi bunlara göre doldurun
+sekmet.pack() #sekmeti görünür yaptık
+
+sekme.mainloop() #sekmenin kayıtlı olduğu değişkeni açar
+
+#Bugünlük Bu Kadar Kendinize İyi Bakın
