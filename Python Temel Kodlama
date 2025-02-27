@@ -1,0 +1,136 @@
+#KAYNAK SAHİBİ / Zhduken
+#İLK KONU DEĞİŞKENLER
+x = 15 #burda bir değişken atıyoruz değişken nemi
+# pythonda sürekli değişebilen türleri olan pythonun en önemli
+# elementidir eğerki x = 15 atarsam xi bilgisayar sadece 15 görür fakat diğer 15lerden ayırır
+#yukarıda x = 15 ile bir integer(int) yani sayı değişkeni atadım
+#bu değişkenle işlem yapabilir para hesabı vb. yapabilirim
+metin = "Selam" #bu da bir yazı değişkenidir ben bunu metin'e atamak istedim
+#bunla monitöre birşeyler yazdırabilir bu değişkende string(str)dir
+
+dogrumu = True #bu ise boolean(bool) değişkeni bu bir şeyin evetmi hayırmı olduğunu belirtir
+
+küsurat = 15.47 #bu ise integerın ondalıklı hali
+
+#PRİNTLER VE İNPUTLAR
+print(metin) # bu komut seri monitöre Selam yazdırır nedenmi çünkü metin yazdık
+#metini biz Selam olarak tanımlamıştık ama düz Meitn yazdırmak istiyorsanız
+print("Metin") #bunda "" içindeki metni sadece yazar
+
+print(type(dogrumu)) #bunda ise type komutu type(herhangi bir değişken) değişkenin türünü bulur
+#ve type komutunu printin içine yazdırdırdığımız için onun tipini söyler dogrumu değişkenini
+#biz True olarak atadık buda boolean değişkeni oluyor kodu açarsanız class bool yazar buda
+#türünün boolean(bool) olduğunu anlarız
+
+input("İsminiz: ")#buda kullanıcıdan veri yani cevap almaya yarar bu komut İsminiz: yazar
+#ve siz herhangi bir şey yazıp enterlayana kadar seri monitör duraklar
+
+cevap = input("Yaşınız") # burda cevap adlı değişkene kaydettik ama komudu değil
+#eğer kişi cevabı mesela ahmet verdi o zaman cevap = ahmet olur input bir değişkene kaydolmaz
+print(cevap)#bunu yazarsanız kullanıcının cevabını yazar
+#ve eğerki print(cevap)'ı cevap değişkeninden değişkeninden önce yazsaydım hata olurdu çünkü
+#printte içindeki parametreyi arar ve cevabı bulamassa hata verir çünkü cevap değişkeni
+#daha girilmediği için print bunu bulamazdı bu yüzden sıraya dikkat edin!
+
+#kullanıcının verdiği cevap kaydolur peki cevap'ın türü ne oldu?
+#manti iken str(string) olur çünkü kullanıcı cevabı bir metinle verdi yani
+print(type(cevap)) #evet türü str eğer cevaba sayı yazsa bile str geçerdi çünkü
+#sen cevabı verirken python bunu sen görmesende kod bunu "" olarak tanımlar ve buda zaten türü str yapar
+
+#tür değiştirme
+sayı = 5
+sayı2 = str(sayı)
+#burda sayı 5 yani direkt integer fakat sayı2 str değeri
+#kodda belirlenen şey sayı2 sayının string hali olsun olur fakat bunu yapmanız genel olarak
+#hata verebilir çünkü mesela boolean değişkenini asla integer yapamassın yapabileceklerin
+yeni = True
+yeni2 = str(yeni) #burda yeni2 yenideki True komudunu "" içine aldı ve artık cümle oldu
+
+deg = "17"
+deg2 = str(deg) #burdada 17yi "" içinden çıkarıyoruz ama dikkat metnin içinde sadece
+#küsuratsız sayı olabilir
+
+#MATEMATİK İŞLEMLERİ
+#int veya float değişkenlerini toplayıp çıkarmaya yarar
+flt = 15.56
+ine = 13
+
+#dikkat değişken adını seçerken bir komutla aynı ada sahip olmasın ve unutmayın
+print(flt + ine)#bu komutta flt ve ine değişkenlerini toplayıp yazar
+#float ve integerlarla aynanda işlem yapabilirsiniz
+
+
+#str değişkenlerinde + bu cümleleri yanyana getirir ve bitişik bırakır bunu çözmek için
+print(metin + "" + deg) #python "" içini cümle sanıp bu ikisi arasında bitişik bırakır buda cümlelerin
+#arasına boşluk bırakmakta yarar
+
+print(flt + ine) #toplama
+print(flt - ine) #çıkarma
+print(flt * ine) #çarpma
+print(flt / ine) #bölme
+print(flt // ine) #Tamsayı bölme
+print(flt ** ine) #Kuvvetini bulma
+print(flt % ine) #Kalan bulma
+#işlemler için daha detaylı olarak math kütüphanesinide kullanabilirsin bunu başka bir derste
+#anlatacağım
+
+
+
+#İF ELSE KOMUTLARI
+#Bunlar eğer veya ise komutlarıdır mesela x = 10 sende eğer x 11 olursa bunu yap diceksin
+örn1 = "Ss12"
+örn2 = True
+örn3 = 15
+
+if örn1 == "Ss12":
+    print("Örnek1 Ss12ye eşit")
+    # burda if eğer anlamındadır ve örn1 ss12ye eşitse şunu yap demektir
+    # iki = sebebi ='in anlamı mesela x = 1 x'i 1 yaptır == eşit ise anlamına gelir sadece bu değil
+    # != eşit değilse anlamına gelir
+    # < küçükse > ise büyükse anlamına gelir
+    # <= küçük veya eşitse >0 büyük veya eşitse bunlarıda ifde kullanabilirsin
+elif örn1 == "Ss14":
+    print("Örnek1 Ss14'e eşit")
+    #elif'in amacı bir if komudu açınca o if komudunu kapatana kadar başka if koyamassın onun yerine
+    #eğer o değilde bu ise anlamına gelir ama elif'i örnek için koydum çünkü zaten örn1 Ss12ye eşit
+
+elif örn1 != "Ss12":
+    print("Örnek1 Ss12ye eşit değil")
+    #burdada örn1 ss12ye eşit değilse bunu yaz dedik
+    #büyüktür veya küçüktür if parametreleri bool ve str değişkenlerinde geçerli değildir
+else:
+    print("Hata")
+    #burda if'i kapattık yeni bir if açabiliriz if sadece strler içinde geçerli değil zaten
+    #burdan sonra satır başına geçin
+if örn2 == True:
+    print("Doğru")
+    #booleanda sadece True veya False Bakabilirsin
+elif örn2:
+    print("Yanlış")
+elif örn2 == False:
+    print("Yanlış")
+else:
+    print("Yanlış veya Boolean Değişkeni Hatalı")
+    #burda yazdığım iki elifte gereksiz çünkü iki kod yeter eğer True değilse zaten False'dur
+    #bool değişkenini ifte kullanırken if ve else yeter bunu örneklendirmek için yaptım
+if örn3 = 15:
+    print("Sayı 15")
+elif örn3 >= 15:
+    print("Sayı 15 veya büyük")
+elif örn3 <= 15:
+    print("Sayı 15 veya küçük")
+elif örn3 > 15:
+    print("Sayı net 15den büyük")
+elif örn3 != 15:
+    print("Sayı net 15 değil")
+else:
+    ("Hata Girdiğiniz Sayı Hatalı")
+    #bunlarda sayının ifte kullanımıydı ders bu kadardı iyi günler!
+
+
+
+
+
+
+
+# Math,Random ve Tkinter Kütüphanesi Yakında
