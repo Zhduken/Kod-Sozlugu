@@ -1,3 +1,4 @@
+#GİTTHUB OTOMATİK TÜRKÇE YAPIYOR LÜTFEN SAYFAYI İNGİLİZCEYE ÇEVİRİP KODU ALIN
 import math #math kütüphanesini ekler ve bunu math. ile çağırırız
 import tkinter as tk #tk kütüphanesini ekleriz ve tk ile çağırılmasını söyleriz
 import random
