@@ -1,0 +1,115 @@
+// Emeğe Saygı Olarak Kaynak Kodumu Kullanırken Aldığınız Kişiyi Belirtin
+
+//kendiniz bir c# dosyası oluşturmak isterseniz ctrl + shift + p kombosunu yapın ve New projeti seçin sonra console appi seçin defaultta-
+//- ayarlayıp projeje isimini yazın oluşan dosyada Consoleappi açın ve Program.csyi seçin bu kadar
+// info = //'dan sonra başlayan cümleler koda dahil olmaz yorum satırıdır  
+// Her fonksyon yani kod satırından sonra ; koyarak kodu bitirin
+
+//DİKKAT! 
+//KODU ÇALIŞTIRIRSANIZ ÇALIŞMAZ ÇÜNKÜ ANLATIM OLDUĞU İÇİN DEĞİŞKENLER ÇAKIŞABİLİR
+
+int a = 16; // a adlı bir değişken oluşturuyoruz ve bu bir integer = sayı başta bunu int olarak belirtiriza artık 16 sayısını belirtir
+string y = "Selam"; // y adlı değişkeni string = yazı değişkeni kodun başında bunu belirttik y artık Selamın çağırma komududur
+bool x = true; // x adlı değişken bool yani true=doğru,false=yanlış bir şeyin truemi yoksa falsemi olduğunu belirler x artık doğru olduğunu anlar
+double z = 1.15; // bu ise basit integer değişkeninin ondalıklı hali
+// değikenler bir şeyi belirtir bunlar her zaman değişebilir bunların türleri bunlardı mesela matematikteki gibi
+// mesela  int x = 16; burda x'i yazdığımızda kod 16yı çağırır
+Console.Write("Selam!");  // Terminale Selam Yazıdırır.
+Console.WriteLine("Selam Bu Yeni Bir Satır");   // Terminale Yeni Bir Satırda () içinde belirttiğiniz yazıyı yazar
+Console.ReadLine();  // Kullanıcıdan Birşey Girmesini İster Bir Yazı
+string cevap = Console.ReadLine(); //istediğim bir cümleye bu kodu atadım ve t yazınca bu kod gelicek
+//DİKKAT! eğer string t = Console.Readline(); komudunda tyi çağırdığımızda t = kullanıcının verdiği cevap gelir 
+// örnek Console.Write(t); yazınca kullanıcının verdiği cevabı kendisi yeniden yazar
+// Eğerki derseniz Readline komudunda kullanıcı ne yazacağını bilmiyor derseniz çözümü var Console.Write("İsminiz ");
+//kodundan sonra Console.Readline(); yazın artık kullanıcı ne yazacağını bilir ama Console.Write'da sonunda boşluk bırakınki
+//kullanıcı yazarken İsminiz yazısıyıla bitişik olmasın
+
+//Mesela iki değişkeni aynı satırdamı yazmak istiyosunuz o zaman + ile bunu yapabiliriz
+string yazı1 = "Benim Adım";
+string yazı2 = "Mehmet!";
+//bunları beraber yazmak için şu komudu kullanın
+Console.WriteLine(yazı1 + " " + yazı2); // WriteLine zorunlu değil isterseniz writeda kullanabilirsiniz
+// ortadaki "" ise bir metin olarak algılar biz bunu yazı1 ile yazı2nin arasıda boşluk olması için koyduk bu tercih meselesi
+//sadece string(yazı değişkeni) için geçerli değil hepsinde
+int sayi = 15;
+bool doğrumu = true;
+Console.WriteLine(sayi + "" + doğrumu);
+// bunu yazarsanız hem 15 yani sayinin değerini yazar sonra ""(boşluğu yazar) sonrada true yani doğrumu değişkeninin değerini yazar
+//mesela string olan bir şeyi mesela kullanıcıdan ReadLine yazdın ve kullanıcı buna 15 dedi bu string olarak kaydedilir
+//bunu integer yapmanın bir yolu var
+string strmetni = Console.ReadLine(); 
+int intçeviri = Convert.ToInt32(strmetni);
+//burda strmetni kullanıcıdan bir metin alır sonrada intçeviri değişkeni belirtiriz ve bunun değeri strmetninin int hali
+//dikkat eğer kullanıcı strmetnine sadece küsuratsız sayı yazarsa olur sıkıntı burda bu yüzden Console.Write ile metnin başına
+//ne cevabı istediğinizi belirtin
+//convert ile herşeyi çevireblirsiniz sadece readline verilerini değil veya integerı stringede çevirebilirsin
+int intsayi = 1; //int(sayı(küsuratsız)) bir değer belirledik bunu yazıya işlemek istiyoruz mesela
+string intolmayansayı = Convert.ToString(intsayi); // bu değişkende artık intsayinin string halidir
+
+//ÇOK İYİSİN BURAYA KADAR GELDİN YENİ KONUMUZ MATEMATİK İŞLEMLERİ (GÖZÜN KORKMASIN BASİT)
+// ilk konumuz 4 işlem ama bunu biz değil c# yapıcak
+int sayi1 = 5;
+double sayi2 = 4.5;
+// yukarıda iki tane sayı belirledik bunları toplayıp bize terminalden yazdırmak istiyorsanız
+Console.WriteLine(sayi1 + sayi2); // böylece iki sayıyı toplamış oldu
+//dikkat stringer veya bool değişkenlerini toplayamassın ve 2.sayı double olmak zorunda değil oda int olabilir bunu bilin
+//başka bir yoluda var
+double sonuc = sayi1 + sayi2; //double belirtemin sebebi iki sayının toplamı ondalıklı olması
+//4 işlem ise:
+Console.WriteLine(sayi1 + sayi2); //toplama
+Console.WriteLine(sayi1 * sayi2); //çarpma
+Console.WriteLine(sayi1 / sayi2); //bölme
+Console.WriteLine(sayi1 - sayi2); //çıkarma
+//MATH Sınıfı
+//bunda ise matematik fonksyonlarını kullanacağız
+Console.WriteLine(Math.Pow(9,2)); //burda matematikteki kuvvetler kısmıdır ilk sayı taban ikinci sayı kuvvetdir
+//bu sonucu terminale geçirir
+Console.WriteLine(Math.Sqrt(8)); // burdada sayının karekökünü buluruz ve bunu terminale yazdırırız
+//MATEMATİK KISMINIDA GEÇTİN ŞİMDİ İF VE ELSE KONUSU 
+bool booldeg = true; //bool değişkenini oluşturduk 
+//if inglizcede eğer demektir mesela e değeri a'ya eşitse şunu yap emri içindir veya bool true ise
+if (booldeg == true) //burda booldeg true yani evet ise şunu yap demektir {} komudunun içine ne yapmasını belitin
+//info iflerde = yerine == kullanırızki makine bunu eşitleme sanmasın = eşitle anlamına gelmektedir bu yüzden iflerde == kullan
+{
+Console.WriteLine("Booldeg Evet Diyor"); //burdada yeni satır açıp ona bu yazıyı yazdırıyoruz
+}
+else if (booldeg == false) //else if ise iften sonra gelir ve eğer if değilde buysa bunu yap demektir iften sonra bu komudu-
+//-kapatana kadar başka if diyemessiniz if'i birkere koyduktan sonra hep else if komudunu kullanın
+{
+Console.WriteLine("Booldeg Hayır Diyor"); //burdada eğer booldeg false ise bunu yaz diyor yeni satırda
+//fakat bunu yazmicak çünkü booldegimizi biz true olarak seçtik
+}
+else{
+Console.Write("Hiçbiri değil"); //info süslü parantezde istediğiniz kadar boşluk bırakın bir tane boşluk zorunlu değil
+
+} //bu ise bu if komutunu kapatır ve derki eğer hiçbiri değilse bunu yap
+//if komutunu else ile bitirdikten sonra ikinci bir if komudu kullanabilirsiniz :)
+//BAŞLANGIÇ KONULARINI BİTİRDİN FİNALE GEÇELİM
+//Hesap Makinesi Yapımı
+Console.Write("Yapmak İstediğiniz İşlemi Seçin(+-*/)"); //burda kişiye soru soruyoruz
+string cevap1 = Console.ReadLine(); // Burdada Kişiden Cevabı Alıyoruz ve bunu cevap1e atıyoruz
+Console.Write("İlk Sayı");
+string cevap2 =Console.ReadLine();//burdada hangi sayıyı istediğini sorup bunları toplayabilmek için int'e çeviriyoruz
+//hatırlatma ReadLine cevapları string olarak kaydedildiği için mat işlemi yapabilmek için bunları int'e çevirmeliyiz
+int çevi1 = Convert.ToInt32(cevap2);
+Console.Write("İkinci Sayı");
+string cevap3 =Console.ReadLine();
+int çevi2 = Convert.ToInt32(cevap3);
+if (cevap1 == "+")
+{
+Console.WriteLine(çevi1 + çevi2);
+//burda cevap1 + isebunları topla ama dikkat stringlerde veya
+//string değişkenlerin yanına + koyunca toplamak yerine o satırda o cümlenin bitişiğine koy demektir
+}
+else if(cevap1== "-")
+{
+Console.WriteLine(çevi1 - çevi2);
+}
+else if (cevap1 == "/")
+{
+    Console.WriteLine(çevi1 / çevi2);
+}
+else if (cevap1 == "*");
+{
+    Console.WriteLine(çevi1 * çevi2);
+}
