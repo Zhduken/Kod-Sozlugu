@@ -1,0 +1,20 @@
+#ARKADAŞLAR İLK ÖNCE PYTHON TEMEL EĞİTİMİ OKUYUN VE LİSTELEME
+liste = ["Karpuz" "Elma"]
+#ben bu listenib elemanlarınısıra sıra yazdırmak için veya bölmek için
+
+for meyve in liste: #listeyi böldüm ve her bir parçaya meyve adı verdim
+    print(meyve) #bu elemanlar bitene kadar yazıcak
+
+#RANGE
+#bu fonksyon belirledğiniz sayıya kadar sayı üretir (bitiş hariç)
+
+# range(100) #yüze kadar sayı oluşturduk
+# range(10,100) # 10dan başlayıp 100'e kadar sayı oluşturduk
+# range(10, 100, 5) #beşer beşer atlayarak 10dan yüze kadar sayı üretti
+#range(başlangıç, bitiş, adımsayısı)
+#sadece 1 eleman belirtirsen sayi daki gibi onu bitiş olarak algılar
+for i in range(1,100,2): #birden yüze kadar ikişer atlayan elemanlara yani sayılara i adını verdik
+    print(i) #bu elemanları yaz (100 harç 100'e kadar yaıcak)
+    
+#DERS ÜZGÜNÜM AMA BURDA BİTİYOR MERAK ETMEYİN DEVAMI OLUCAK BU KONU ÇOK KISA OLDUĞU İÇİN
+
