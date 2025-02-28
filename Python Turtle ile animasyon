@@ -1,0 +1,64 @@
+import turtle #TURTLE kütüphanesini dahil eder
+#ENNNNN BASİT KONUMUZ fakat bir o kadar önemli
+#bu bir animasyonlama ve ekrana istediğimiz açılarda bir şey çizdirebiliriz
+#kodu çaluştırabilirsiniz ama hem kare hem yıldız hem yuvarlağı aynanda çizer
+
+pencere = turtle.Screen() #Animasyon sekmemizi tanımladık
+cizim = turtle.Turtle() #çizim elemanını tanımladık kalem gibi düşünün
+cizim.pensize(5) # çizim kalınlığını ayarlar
+
+# cizim.forward(100) çizim kalemimiz 100 cm ileri doğru çizsin
+
+#mesela bir karemi çizmek istiyorsunuz
+
+for _ in range(4): #range ile 4'e kadar saymasını istedik ve bunu for ile _ adında elemanlara böldük
+    #1'den dörde kadar bitirene kadar aşağıdaki fonksyonları yapacak (4kez)
+    #burda pek anlatamadım for ve range derslerini okursanız daha iyi olur
+    cizim.forward(100) #100ilerle
+    cizim.right(90) #90derece sağa dön
+
+    #yıldız çizmek için
+for _ in range(5):
+    cizim.forward(100) # 4kez 100 ileri gidip 144 derece dönüp tekrar çizecek
+    cizim.right(144)
+
+#yuvarlak çizmek için circle aralıksız açıyla dönmek
+cizim.circle(100) #pi sayısına göre pi = 3,1415.... ona göre alan hesaplayabilirsiniz
+#bu yüzlük bir yuvarlak çizer
+
+cizim.backward(0) #bu belirtilen mesafe kadar geri gider
+cizim.left(0) #rightın left hali right = sağ left = sol
+
+# mesela sayfanın başka bir konumuna
+# gitsin ama oraya giderken bir şey çizmesin istiyorsanız
+
+
+#İLK YOL
+#çizimcimizin başlangıçta kalemi sayfada olur bir yere giderken çizim yapar
+cizim.penup() # artık kalemini kaldırdı bir yere giderken bir şey çizmez
+cizim.forward(200)
+cizim.pendown() #kalemi geri indirdi artık bir yere giderken bir şey çizer
+
+#İKİNCİ YOL
+cizim.goto(100,100) # kaleminizi belirlediğiniz konuma ışınlar
+
+#HIZ AYARLAMA
+cizim.speed(5)#BELİRLEDİĞİNİZ HIZ 10 çok yüksek 7 çok 5 normal 1 yavaş
+#python komutları sıra sıra yaptığı için renk ve hızı kodun en başında ayarlayın
+#mesela ilk önce 100 ileri çiz yazdın sonraki komutta rengi kırmızı yaptın
+#ilk çizdiğini kırmızı çizmez sen kırmızı ayarladıktan sonraki çizimleri kırmızı yapar
+
+#RENK AYARLAMA
+cizim.pencolor("red") # kalem renigini seçer
+
+cizim.fillcolor("Blue") # Dolgu rengini seçer
+
+cizim.color("orange") # hepsinin seçtiğiniz renk yapar
+
+#pencereye belirlediğiniz değişken adını yazıp . koyun
+#pencere. ben kodun en başında pencere adını koymuştum
+pencere.title("Animasyon") # pencere adını belirler
+#bunla daha çok şey yapabilirsiniz
+
+turtle.done() #Ve animasyonu kapatıyoruz/tamamlıyoruz
+#DERS BU KADARDI BENCE GÜZEL OLDU KENDİNİZE İYİ BAKIN
