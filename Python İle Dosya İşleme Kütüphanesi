@@ -1,0 +1,54 @@
+import os # Dosya işleme kütüphanesi os. ile aktifleşir
+#bu kütüphanede dosya işleme yapacağız bu oynamaları pythonumuzun os olarak
+#belirlediği dosya üzerinde yapacağız bu os genelde python yazdığınız
+#kodun içinde olur
+
+
+
+print(os.getcwd()) # bizim os dosyamızın konumu yazar yazar
+
+os.mkdir("Selammm") # os dosyamıza Selammm adında dosya oluşturur
+#dosya adları başka dosya adıyla aynı olmamalı
+
+# os.chdir("") os dosyasının konumunu değiştirir
+# eğerki os dosyasını değiştirmek istiyorsanınz
+# bu kodun içine yeni os dosyanızın konumu yazın ben kendi konumumu yazdım
+
+
+os.makedirs("Deneme/Deneme2") #bu dosyaların özelliği /'dan sonra gelen dosya (deneme2)
+
+#/'dan önceki dosyanın (deneme) içine kaydolur bunun bir sınırı yok
+os.makedirs("aa/aaa/aaa/aaa") # iç içe geçen dosyalar adları aynı olabilir
+
+os.rmdir("Selammm") #os dosyamın içinde Selammm adlı dosyayı siler ama sadece klasör içindir
+
+os.removedirs("Deneme/Deneme2") #deneme dosyası içindeki deneme2'yi siler bunun
+#farkı iç içe klasörleri silebilir ancak içlerinde element olmaması halinde
+
+# os.remove("")  # içinde olduğuunuz os dosyasından dosya silebilir her tür dosyayı kapsar
+
+print(os.listdir()) #os dosyasındaki elemanları sıralar / karışık halde
+
+#fakat bu çok karışık for ile bunu düzenleyebiliriz
+
+for dosya in os.listdir(): #os listele dedim ve bunları dosya adında adlandır
+    print(dosya) #elemanları sıra sıra yazar
+
+os.rename("aa", "DenemeYeni") #istediğiniz dosyayı isimlendirebilirsiniz
+#yani değiştireblirsiniz os.rename("eskiismi","yeniismi")
+
+#eğerki dosyanızda ilk elemanı silmek istiyorsunuz
+#ilk elemandır eğerki dosyanızı listelerseniz görebilirsinz onu silmek ve otomasyon
+#şekildemi yapmak istiyosunuz
+silinecek = os.listdir()[0] #os dosyasının ilk elemanını silinecek değişkenine atadım
+#değişkenismi = os.listdir(klasörkonumu)[kaçıncıeleman]
+#ben dosya konumu girmedim çünkü direkt ostan sileceğim 
+#pythonda sayma sayısı 0dan başlar
+#os.remove(silinecek) #silinecek dosyayı sil silinecek ise gizli dosya olduğuna göre iş bitti
+#dosyadaki ilk elemanı silemessiniz buna erişim engelli o yüzdem
+
+
+
+#Python detaylı kütüphanelerini öğrenmek istiyorsanız Pythona Giriş kanalından izleyebilirsiniz
+#KONU BU KADARDI KISA OLDUĞU İÇİN ÜZGÜNÜM AMA OKUL VE RAMAZAN HAZIRLIKLARI İÇİN
+os.rmdir("DenemeYeni")
