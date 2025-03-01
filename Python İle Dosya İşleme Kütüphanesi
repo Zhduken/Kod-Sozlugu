@@ -5,14 +5,14 @@ import os # Dosya işleme kütüphanesi os. ile aktifleşir
 
 
 
-print(os.getcwd()) # bizim os dosyamızın konumu yazar yazar
+print(os.getcwd()) # bizim os dosyamızın konumu yazar
 
-os.mkdir("Selammm") # os dosyamıza Selammm adında dosya oluşturur
+os.mkdir("Selam") # os dosyamıza Selammm adında dosya oluşturur
 #dosya adları başka dosya adıyla aynı olmamalı
 
 # os.chdir("") os dosyasının konumunu değiştirir
 # eğerki os dosyasını değiştirmek istiyorsanınz
-# bu kodun içine yeni os dosyanızın konumu yazın ben kendi konumumu yazdım
+# bu kodun içine yeni os dosyanızın konumu yazın
 
 
 os.makedirs("Deneme/Deneme2") #bu dosyaların özelliği /'dan sonra gelen dosya (deneme2)
