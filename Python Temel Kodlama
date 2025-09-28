@@ -6,7 +6,7 @@ x = 15 #burda bir değişken atıyoruz değişken nemi
 #yukarıda x = 15 ile bir integer(int) yani sayı değişkeni atadım
 #bu değişkenle işlem yapabilir para hesabı vb. yapabilirim
 metin = "Selam" #bu da bir yazı değişkenidir ben bunu metin'e atamak istedim
-#bunla monitöre birşeyler yazdırabilir bu değişkende string(str)dir
+#bunla terminale(yeni başlayanlar için monitör gibi basit ifadeler kullanacağım) birşeyler yazdırabilir bu değişkende string(str)dir
 
 dogrumu = True #bu ise boolean(bool) değişkeni bu bir şeyin evetmi hayırmı olduğunu belirtir
 
